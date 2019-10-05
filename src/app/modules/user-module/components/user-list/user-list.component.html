@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="row mt-16">
+    <div class="col-sm-12">
+      <h3>Users</h3>
+    </div>
+  </div>
+
+  <div class="row mt-32">
+    <div class="col-sm-12">
+      <ngx-datatable #table class="bootstrap" [headerHeight]="50" [footerHeight]="50" [rowHeight]="'auto'" [limit]="10"
+        [count]="true" [rows]="users" [columnMode]="'force'">
+        <ngx-datatable-column name="Name" prop="name" width="200">
+          <ng-template let-value="value" ngx-datatable-cell-template>
+            <strong class="ellipsis">{{ value }}</strong>
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Email" prop="email" width="200">
+          <ng-template let-value="value" ngx-datatable-cell-template>
+            <strong class="ellipsis">{{ value }}</strong>
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Mobile no." prop="mobile" width="200">
+          <ng-template let-value="value" ngx-datatable-cell-template>
+            <strong class="ellipsis">{{ value }}</strong>
+          </ng-template>
+        </ngx-datatable-column>
+
+      </ngx-datatable>
+    </div>
+  </div>
+</div>
